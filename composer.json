@@ -1,7 +1,7 @@
 {
-    "name": "nekhbet/laravel-gettext",
+    "name": "kciszmerk/laravel-gettext",
     "description": "Adds localization support to laravel applications in an easy way using Poedit and GNU gettext.",
-    "homepage": "https://github.com/nekhbet/laravel-gettext",
+    "homepage": "https://github.com/kciszmerk/laravel-gettext",
     "keywords": [
         "gettext",
         "localization",
@@ -11,6 +11,10 @@
     ],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Kamil Ciszewski",
+            "email": "cichy.codes@gmail.com"
+        },
         {
             "name": "Nicolás Daniel Palumbo",
             "email": "n@xinax.net"
@@ -25,7 +29,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/nekhbet/laravel-gettext/issues"
+        "issues": "https://github.com/kciszmerk/laravel-gettext/issues"
     },
     "require": {
         "php": ">=8.0",
@@ -41,17 +45,17 @@
     },
     "autoload": {
         "psr-0": {
-            "Nekhbet\\LaravelGettext\\": "src/"
+            "Xinax\\LaravelGettext\\": "src/"
         },
         "files": [
-            "src/Nekhbet/LaravelGettext/Support/helpers.php"
+            "src/Xinax/LaravelGettext/Support/helpers.php"
         ]
     },
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
           "providers": [
-            "Nekhbet\\LaravelGettext\\LaravelGettextServiceProvider"
+            "Xinax\\LaravelGettext\\LaravelGettextServiceProvider"
           ]
        }
     }
