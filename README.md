@@ -1,10 +1,3 @@
-
-```bash
-composer require kciszmerk/laravel-gettext
-```
-
--------------------------
-
 # Laravel Gettext
 
 *Laravel Gettext* is a translation package compatible with the [Laravel Framework](https://github.com/zerospam/laravel-gettext). It provides a simple way to add localization support to Laravel applications. It is designed to work with *GNU gettext* and *Poedit*. Former versions of this package (before 4.x) works with the native php-gettext module. Current versions uses the Symfony translation package by default instead of native php extension.
@@ -45,7 +38,7 @@ Optional requirements if you want to use the native php-gettext extension:
 Once it's installed, Laravel will discover automatically the provider and load it. (Only for 5.5+)
 
 ```bash
-    composer require zerospam/laravel-gettext
+    composer require kciszmerk/laravel-gettext
 ```
 
 
@@ -63,7 +56,7 @@ You also need to register the LaravelGettext middleware in the ```app/Http/Kerne
     protected $middlewareGroups = [
         'web' => [
             // ...
-            \Nekhbet\LaravelGettext\Middleware\GettextMiddleware::class,
+            \Xinax\LaravelGettext\Middleware\GettextMiddleware::class,
         ],
         // ...
     ]
@@ -428,7 +421,7 @@ Also, if you're using Symfony as your backend, you can add the `_s` method. It's
      * The "_n" and "ngettext" are plural translation functions
      * The "dgettext" function allows a translation domain to be explicitly specified
      *
-     * "__" and "_n" and "_i" and "_s" are helpers functions @see \Nekhbet\LaravelGettext\Support\helpers.php
+     * "__" and "_n" and "_i" and "_s" are helpers functions @see \Xinax\LaravelGettext\Support\helpers.php
      */
     'keywords-list' => ['_', '__', '_i', '_s', 'gettext', '_n:1,2', 'ngettext:1,2', 'dgettext:2'],;
 ```
